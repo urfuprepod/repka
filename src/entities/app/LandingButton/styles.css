@@ -1,0 +1,6 @@
+.banner-button {
+    padding: 20px 15px;
+    font-size: calc(50vw / 10);
+    line-height: 1;
+    font-weight: 700;
+}
