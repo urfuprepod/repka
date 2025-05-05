@@ -1,9 +1,27 @@
+.simple-button {
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  background-color: white;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  .ant-radio {
+    display: none !important;
+  }
+
+  &:has(input:checked) {
+    border-color: green;
+  }
+}
+
 .bubbly-button {
   display: inline-block;
   font-size: 1em;
   padding: 1em 2em;
   background-color: #ff0081;
-width: 100%;
+  width: 100%;
   -webkit-appearance: none;
   appearance: none;
   color: #fff;
@@ -117,5 +135,4 @@ width: 100%;
       110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
-
 }

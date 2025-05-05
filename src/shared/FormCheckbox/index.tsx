@@ -32,7 +32,7 @@ const FormCheckbox: FC<PropsWithChildren<Partial<Props>>> = (props) => {
       {...rest}
       onClick={onClick}
       id={id}
-      className={classNames("bubbly-button", { animate: isActive })}
+      className={classNames("simple-button", { animate: isActive })}
     >
       {children}
     </Radio>

@@ -22,7 +22,7 @@ const CreateMeditationPage = () => {
   return (
     <Flex vertical gap={20}>
       <Title level={2}>Создать медитацию</Title>
-      <Form form={form}>
+      <Form form={form} layout="vertical">
         {creationForm.map((item) => (
           <FormGrid key={item.name} isRequired itemsInLine={2} {...item} />
         ))}
