@@ -1,12 +1,13 @@
 import React from "react";
 import { Layout, Menu, Space, Avatar, Image } from "antd";
 import { Tablets, UserCircle2 } from "lucide-react";
+import Link from 'next/link';
 import Title from "antd/es/typography/Title";
 
 const menuItems = [
-  { key: "home", label: "Главная" },
-  { key: "about", label: "О нас" },
-  { key: "contact", label: "Контакты" },
+  // { key: "home", label: "Главная" },
+  { key: "create", label: <Link href="/create">Создание медитации</Link> },
+  // { key: "contact", label: "Контакты" },
 ];
 
 

@@ -1,10 +1,10 @@
 import { Button } from "@/shared";
 import React from "react";
-import "./styles.css";
+import styles from "./styles.module.css";
 
 const LandingButton = () => {
   return (
-    <Button className="banner-button" type="primary">
+    <Button className={styles["banner-button"]} type="primary">
       Создать медитацию
     </Button>
   );

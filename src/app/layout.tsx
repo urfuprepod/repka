@@ -3,10 +3,12 @@ import { Geist, Geist_Mono, Noto_Sans } from "next/font/google";
 import "./globals.css";
 import { SITE_NAME } from "@/constants/seo.constants";
 import { ToastContainer } from "react-toastify";
-import "antd/dist/reset.css";
 import { ConfigProvider, Layout } from "antd";
 import Header from "@/widgets/Header";
-import '@ant-design/v5-patch-for-react-19';
+import "@ant-design/v5-patch-for-react-19";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
+import 'antd/dist/reset.css';
+import 'webrtc-adapter';
 
 const zen = Noto_Sans({
   subsets: ["cyrillic", "latin"],
@@ -31,42 +33,51 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head>
+        {/* <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/antd@5.x/dist/reset.css"
+          precedence="default"
+        /> */}
+      </head>
       <body className={zen.className}>
-        <ConfigProvider
-          theme={{
-            token: {
-              colorPrimary: "#52c41a", // Зелёный цвет из палитры Ant Design
-            },
-            components: {
-              Button: {
-                fontSize: 18,
-                paddingInline: 15,
-                paddingBlock: 20,
-                fontWeight: 500
+        <AntdRegistry>
+          {" "}
+          <ConfigProvider
+            theme={{
+              token: {
+                colorPrimary: "#52c41a", // Зелёный цвет из палитры Ant Design
               },
-              Typography: {
-                fontSize: 18,
-                fontWeightStrong: 700
-              }
-            },
-          }}
-        >
-          <Layout style={{padding: '0 5px 20px'}}>
-            <Header />
-            {children}
-            <footer></footer>
-          </Layout>
-        </ConfigProvider>
-
-        <ToastContainer
-          position="top-center"
-          autoClose={3000}
-          hideProgressBar
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnHover
-        />
+              components: {
+                Button: {
+                  fontSize: 18,
+                  paddingInline: 15,
+                  paddingBlock: 20,
+                  fontWeight: 500,
+                },
+                Typography: {
+                  fontSize: 18,
+                  fontWeightStrong: 700,
+                },
+              },
+            }}
+          >
+            <Layout style={{ padding: "0 5px 20px" }}>
+              <Header />
+              {children}
+              <footer></footer>
+            </Layout>
+          </ConfigProvider>
+          <ToastContainer
+            position="top-center"
+            autoClose={3000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnHover
+          />
+        </AntdRegistry>
       </body>
     </html>
   );
