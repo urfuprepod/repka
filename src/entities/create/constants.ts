@@ -1,7 +1,3 @@
-import { GridItem } from "@/shared/types";
-
-type CreationForm = { items: GridItem[]; name: string; label: string }[];
-
 export const creationForm: CreationForm = [
   {
     name: "description",
@@ -12,11 +8,13 @@ export const creationForm: CreationForm = [
       { name: "Концентрация", value: "concentration" },
     ],
     label: "Описание ситуации",
+    itemsInLine: 2,
   },
 
   {
     name: "time",
     label: "Время медитации (в минутах)",
+    itemsInLine: 2,
     items: [
       {
         name: "3",
@@ -39,16 +37,18 @@ export const creationForm: CreationForm = [
   {
     name: "soundtrack",
     label: "Фоновый шум",
+    itemsInLine: 2,
     items: [
       { name: "Лес", value: "forest" },
       { name: "Море", value: "sea" },
       { name: "Ветер", value: "wind" },
-      { name: "Лес", value: "forest" },
+      { name: "Горы", value: "mountain" },
     ],
   },
   {
     name: "voice",
     label: "Голос",
+    itemsInLine: 2,
     items: [
       { name: "Мужской 1", value: "man1" },
       { name: "Мужской 2", value: "man2" },

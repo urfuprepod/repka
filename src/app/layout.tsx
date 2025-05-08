@@ -62,7 +62,7 @@ export default function RootLayout({
               },
             }}
           >
-            <Layout style={{ padding: "0 5px 20px" }}>
+            <Layout style={{ padding: "0 5px 20px", height: '100%', minHeight: '100dvh' }}>
               <Header />
               {children}
               <footer></footer>

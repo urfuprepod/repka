@@ -13,3 +13,9 @@ interface ICarouselElement {
   title: string;
   paragraphs: string | string[];
 }
+type CreationForm = {
+  items: GridItem[];
+  name: string;
+  label: string;
+  itemsInLine: number
+}[];

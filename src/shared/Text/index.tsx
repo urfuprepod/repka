@@ -8,17 +8,25 @@ type AdditionalProps = {
 
 const TextMeditation: FC<
   React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLSpanElement>,
-    HTMLSpanElement
+    React.HTMLAttributes<HTMLParagraphElement>,
+    HTMLParagraphElement
   > &
     AdditionalProps
 > = (props) => {
   const { style, fontSize, textAlign, ...rest } = props;
 
-  return <span {...rest} style={{ ...style, fontSize, textAlign }} />;
+  return <p {...rest} style={{ ...style, fontSize, textAlign }} />;
 };
 
 export const LandingText = partialProps(TextMeditation, {
   fontSize: 24,
   textAlign: "center",
 });
+
+export const SimpleText = partialProps(TextMeditation, {
+  fontSize: 16,
+  textAlign: 'center',
+  style: {
+    fontWeight: '400'
+  }
+})
