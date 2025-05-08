@@ -8,12 +8,12 @@ import dynamic from "next/dynamic";
 import { CreatePageButton } from "@/shared/Button";
 import { FormGenerator } from "@/widgets";
 import { HiddenContainer } from "@/shared";
-import { Instructions } from "@/entities/create/components";
 import { callError } from "@/shared/utils";
 import { useMeditationStore } from "@/processes/store";
 import { useRouter } from "next/navigation";
+import { LandingText, SimpleText } from "@/shared/Text";
 
-// 
+//
 const VoiceRecorder = dynamic(
   () => import("@/entities/create/components/VoiceRecorder"),
   {
@@ -70,7 +70,20 @@ const CreateMeditationPage = () => {
 
       <HiddenContainer isHidden={isHidden}>
         <Flex vertical gap={15}>
-          <Instructions />
+          <LandingText>
+            Текстовая инструкция. Запишите свой голос. Нужно 1 минуту. Можете
+            говорить что-то свое или прочитать текст пример
+          </LandingText>
+
+          <SimpleText>
+            Люди нюхают — запахло жареным! Нагнали каких-то. Блестящие! В
+            касках! Нельзя сапожища! Скажите пожарным: на сердце горящее лезут в
+            ласках. Я сам. Глаза наслезнённые бочками выкачу. Дайте о ребра
+            опереться. Выскочу! Выскочу! Выскочу! Выскочу! Рухнули. Не выскочишь
+            из сердца! На лице обгорающем из трещины губ обугленный поцелуишко
+            броситься вырос. Мама! Петь не могу. У церковки сердца занимается
+            клирос!
+          </SimpleText>
           <VoiceRecorder updateBlob={setBlob} />
         </Flex>
       </HiddenContainer>

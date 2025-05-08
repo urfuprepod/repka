@@ -1,10 +1,12 @@
-import { LandingText, SimpleText } from "@/shared/Text";
-import React from "react";
 
-const Instructions = React.memo(() => {
+import React from "react";
+// import { LandingText, SimpleText } from "@/shared/Text";
+
+
+const InstructionsComponent = () => {
   return (
     <>
-      <LandingText>
+      {/* <LandingText>
         Текстовая инструкция. Запишите свой голос. Нужно 1 минуту. Можете
         говорить что-то свое или прочитать текст пример
       </LandingText>
@@ -16,9 +18,9 @@ const Instructions = React.memo(() => {
         Выскочу! Выскочу! Выскочу! Выскочу! Рухнули. Не выскочишь из сердца! На
         лице обгорающем из трещины губ обугленный поцелуишко броситься вырос.
         Мама! Петь не могу. У церковки сердца занимается клирос!
-      </SimpleText>
+      </SimpleText> */}
     </>
   );
-});
+};
 
-export default Instructions;
+export default InstructionsComponent;
