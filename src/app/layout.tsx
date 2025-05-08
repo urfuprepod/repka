@@ -8,7 +8,7 @@ import Header from "@/widgets/Header";
 import "@ant-design/v5-patch-for-react-19";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import 'antd/dist/reset.css';
-import 'webrtc-adapter';
+
 
 const zen = Noto_Sans({
   subsets: ["cyrillic", "latin"],

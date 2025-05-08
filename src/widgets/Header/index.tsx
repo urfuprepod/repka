@@ -1,42 +1,30 @@
 import React from "react";
-import { Layout, Menu, Space, Avatar, Image } from "antd";
+import { Space, Avatar } from "antd";
 import { Tablets, UserCircle2 } from "lucide-react";
-import Link from 'next/link';
+import Link from "next/link";
 import Title from "antd/es/typography/Title";
-
-const menuItems = [
-  // { key: "home", label: "Главная" },
-  { key: "create", label: <Link href="/create">Создание медитации</Link> },
-  // { key: "contact", label: "Контакты" },
-];
-
+import Menu from "./Menu";
 
 const Header = () => {
   return (
     <div className="flex py-0 px-[24px] bg-white justify-between items-center shadow-md sticky top-0 z-5">
       {/* Логотип слева */}
-      <Space align="center">
-        {/* <Image
+      <Link href={'/'}>
+        <Space align="center">
+          {/* <Image
           width={40}
           src="/logo.png" // Путь к логотипу
           preview={false}
           alt="Логотип"
         /> */}
-        <Tablets style={{ width: 40 }} />
-        <Title level={4} style={{ margin: 0 }}>
-          Сайт медитации
-        </Title>
-      </Space>
+          <Tablets style={{ width: 40 }} />
+          <Title level={4} style={{ margin: 0 }}>
+            Сайт медитации
+          </Title>
+        </Space>
+      </Link>
 
-      <Menu
-        mode="horizontal"
-        items={menuItems}
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          borderBottom: "none", // Убираем дефолтную границу
-        }}
-      />
+      <Menu />
 
       <Space size="middle">
         <span>Иван Иванов</span>

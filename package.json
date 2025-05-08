@@ -28,7 +28,6 @@
     "recordrtc": "^5.6.2",
     "stream-browserify": "^3.0.0",
     "swiper": "^11.2.6",
-    "webrtc-adapter": "^9.0.3",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
